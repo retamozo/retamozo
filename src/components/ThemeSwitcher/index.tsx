@@ -1,8 +1,19 @@
 import { useTheme } from "next-themes";
-import React, { useEffect, useState } from "react";
+import React, {
+  FunctionComponent,
+  PropsWithChildren,
+  useEffect,
+  useState,
+} from "react";
 import { IconMoonFilled, IconSunFilled } from "@tabler/icons-react";
 
-const ThemeSwitcher = () => {
+type ChildComponentArgs = {
+  mounted: boolean;
+  onThemeChange: () => void;
+  theme: unknown;
+};
+
+const ThemeSwitcher = ({ children }: PropsWithChildren<ChildComponentArgs>) => {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
@@ -14,11 +25,16 @@ const ThemeSwitcher = () => {
     setMounted(true);
   }, []);
 
-  return mounted ? (
-    <a onClick={onThemeChange}>
-      {theme === "light" ? <IconMoonFilled /> : <IconSunFilled />}
-    </a>
-  ) : null;
+  return React.Children.map(children, (child) => {
+    if (React.isValidElement<ChildComponentArgs>(child)) {
+      return React.cloneElement<ChildComponentArgs>(child, {
+        mounted,
+        onThemeChange,
+        theme,
+      });
+    }
+    return child;
+  });
 };
 
 export default ThemeSwitcher;

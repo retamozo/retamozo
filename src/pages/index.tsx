@@ -1,3 +1,5 @@
+import Hero from "@/components/Hero";
+import UsefulLinks from "@/components/UsefulLinks/UsefulLinks";
 import Head from "next/head";
 
 export default function Home() {
@@ -9,7 +11,17 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1 className="text-4xl"> Enzo Retamozo</h1>
+      <section className="text-center p-10">
+        <h2 className="text-5xl py-2 font-medium"> Enzo Retamozo</h2>
+        <h3 className="text-2xl py-2">developer & writter.</h3>
+        <p className="text-md leading-8 text-gray-800"></p>
+      </section>
+      <section>
+        <Hero />
+      </section>
+      <section>
+        <UsefulLinks />
+      </section>
     </>
   );
 }
