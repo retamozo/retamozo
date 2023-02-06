@@ -1,9 +1,9 @@
 import React from "react";
-import Dropdown from "../Dropdown";
-import { CommandLineIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
+import { CommandLineIcon } from "@heroicons/react/20/solid";
+import { Dropdown } from "../Dropdown";
 
-const Navbar = () => {
+export const Navbar = () => {
   return (
     <header className="container mx-auto p-5 bg-center m-auto h-14">
       <nav>
@@ -27,5 +27,3 @@ const Navbar = () => {
     </header>
   );
 };
-
-export default Navbar;

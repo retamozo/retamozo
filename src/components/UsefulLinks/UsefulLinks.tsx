@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-const UsefulLinks = () => {
+export const UsefulLinks = () => {
   return (
     <ul>
       <li>
@@ -16,5 +16,3 @@ const UsefulLinks = () => {
     </ul>
   );
 };
-
-export default UsefulLinks;

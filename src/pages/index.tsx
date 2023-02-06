@@ -1,5 +1,5 @@
-import Hero from "@/components/Hero";
-import UsefulLinks from "@/components/UsefulLinks/UsefulLinks";
+import React from "react";
+import { Hero, UsefulLinks } from "@/components";
 import Head from "next/head";
 
 export default function Home() {

@@ -1,6 +1,5 @@
-import React, { FunctionComponent, PropsWithChildren, ReactNode } from "react";
-import Footer from "../Footer";
-import Navbar from "../Navbar";
+import React, { FunctionComponent, PropsWithChildren } from "react";
+import { Navbar, Footer } from "@/components";
 
 const Layout: FunctionComponent<PropsWithChildren> = ({ children }) => {
   return (

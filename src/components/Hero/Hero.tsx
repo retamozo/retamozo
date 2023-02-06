@@ -1,8 +1,8 @@
-import Image from "next/image";
 import React from "react";
+import Image from "next/image";
 import Enzito from "public/profile.jpeg";
 
-const Hero = () => {
+export const Hero = () => {
   return (
     <Image
       src={Enzito}
@@ -15,5 +15,3 @@ const Hero = () => {
     />
   );
 };
-
-export default Hero;

@@ -5,7 +5,7 @@ import {
   IconBrandGmail,
 } from "@tabler/icons-react";
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <footer className="bg-neutrals-100 text-sm h-14">
       <article className="flex flex-col text-center p-2">
@@ -29,5 +29,3 @@ const Footer = () => {
     </footer>
   );
 };
-
-export default Footer;
