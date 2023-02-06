@@ -5,7 +5,7 @@ const Layout: FunctionComponent<PropsWithChildren> = ({ children }) => {
   return (
     <>
       <Navbar />
-      <main className="relative w-screen h-screen flex flex-col justify-center items-center">
+      <main className="relative h-screen flex flex-col justify-center items-center">
         {children}
       </main>
       <Footer />

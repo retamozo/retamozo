@@ -12,7 +12,7 @@ export const Dropdown: FunctionComponent = () => {
   return (
     <Menu as="div" className="relative inline-block text-left">
       <div className="flex items-center">
-        theme
+        menu
         <Menu.Button className="items-center">
           <ChevronDownIcon className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" />
         </Menu.Button>
@@ -26,12 +26,33 @@ export const Dropdown: FunctionComponent = () => {
         leaveFrom="transform opacity-100 scale-100"
         leaveTo="transform opacity-0 scale-95"
       >
-        <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md shadow-lg ring-1 ring-opacity-5 focus:outline-none p-2">
-          <Menu.Item>
+        <Menu.Items className="absolute flex-col right-0 z-10 mt-2 w-56 origin-top-right rounded-md shadow-lg ring-1 ring-opacity-5 focus:outline-none p-2">
+          <Menu.Item as="div" className="flex justify-between text-right">
             <ThemeSwitcher />
           </Menu.Item>
-          <Menu.Item>
-            <p>Curriculum</p>
+          <Menu.Item as="div" className="text-right">
+            <Menu.Item
+              as="span"
+              className="hover:cursor-pointer underline underline-offset-2"
+            >
+              about me
+            </Menu.Item>
+          </Menu.Item>
+          <Menu.Item as="div" className="text-right">
+            <Menu.Item
+              as="span"
+              className="hover:cursor-pointer underline underline-offset-2"
+            >
+              articles
+            </Menu.Item>
+          </Menu.Item>
+          <Menu.Item as="div" className="text-right">
+            <Menu.Item
+              as="span"
+              className="hover:cursor-pointer underline underline-offset-2"
+            >
+              social
+            </Menu.Item>
           </Menu.Item>
         </Menu.Items>
       </Transition>

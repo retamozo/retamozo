@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { CommandLineIcon } from "@heroicons/react/20/solid";
 import { Dropdown } from "../Dropdown";
+import { ThemeSwitcher } from "../ThemeSwitcher";
 
 export const Navbar = () => {
   return (
@@ -20,7 +21,7 @@ export const Navbar = () => {
             </li>
           </Link>
           <li>
-            <Dropdown />
+            <ThemeSwitcher />
           </li>
         </menu>
       </nav>

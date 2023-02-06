@@ -17,7 +17,7 @@ export const Footer = () => {
         <p>
           Made with ♥ by{" "}
           <a
-            href="https://github.com/retamozo/avocado-marketplace"
+            href="https://github.com/retamozo"
             target="_blank"
             referrerPolicy="no-referrer"
             rel="noreferrer"
