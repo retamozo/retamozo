@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import Enzito from "public/profile.jpeg";
+import Enzito from "public/profile_2.jpeg";
 
 export const Hero = () => {
   return (

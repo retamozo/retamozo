@@ -13,7 +13,9 @@ export default function Home() {
       </Head>
       <section className="text-center p-10">
         <h2 className="text-5xl py-2 font-medium"> Enzo Retamozo</h2>
-        <h3 className="text-2xl py-2">developer & writter.</h3>
+        <h3 className="text-2xl py-2">
+          frontend developer & attempting writer.
+        </h3>
         <p className="text-md leading-8 text-gray-800"></p>
       </section>
       <section>
