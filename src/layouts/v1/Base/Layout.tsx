@@ -1,11 +1,12 @@
 import React, { FunctionComponent, PropsWithChildren } from "react";
 import { Navbar, Footer } from "@/components";
+import { motion, Variants } from "framer-motion";
 
 const Layout: FunctionComponent<PropsWithChildren> = ({ children }) => {
   return (
     <>
       <Navbar />
-      <main className="">{children}</main>
+      {children}
       <Footer />
     </>
   );
