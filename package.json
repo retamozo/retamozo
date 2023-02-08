@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.7.9",
+    "@headlessui/tailwindcss": "^0.1.2",
     "@heroicons/react": "^2.0.14",
     "@next/font": "13.1.6",
     "@tabler/icons-react": "^2.2.0",
@@ -17,6 +18,7 @@
     "@types/react-dom": "18.0.10",
     "eslint": "8.33.0",
     "eslint-config-next": "13.1.6",
+    "framer-motion": "^9.0.2",
     "next": "13.1.6",
     "next-themes": "^0.2.1",
     "react": "18.2.0",
