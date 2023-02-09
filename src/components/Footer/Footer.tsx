@@ -34,8 +34,8 @@ export const Footer = () => {
                 href={href}
                 target="_blank"
                 referrerPolicy="no-referrer"
-                key={key}
                 rel="noreferrer"
+                key={key}
               >
                 {element}
               </a>

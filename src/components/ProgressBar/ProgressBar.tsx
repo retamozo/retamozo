@@ -1,13 +1,31 @@
-import React from 'react';
+import React, { FunctionComponent } from "react";
 
-const ProgressBar = () => {
-    return (
-        <div className='flex h-96 justify-center'>
-            <div className='bg-slate-200 rounded-xl h-[100%]'>
-                <div className="bg-slate-700 w-full rounded-md">a</div>
-            </div>
-        </div>
-    );
+type Align = "vertical" | "horizontal";
+interface ProgressBarProps {
+  align: Align;
+  done: number;
+}
+const ProgressBar: FunctionComponent<Partial<ProgressBarProps>> = ({
+  align = "horizontal",
+  done = 30,
+}) => {
+  const containerClass: Record<Align, string> = {
+    horizontal: "w-full min-w-full h-3",
+    vertical: `h-full min-h-[500px]`,
+  };
+
+  const doneClass: Record<Align, string> = {
+    horizontal: `w-[${done}%] h-3`,
+    vertical: `h-[${done}%]`,
+  };
+
+  return (
+    <div className="flex justify-center container mx-auto px-4 min-h-full min-w-full">
+      <div className={`bg-slate-200 rounded-xl h- ${containerClass[align]}`}>
+        <div className={`bg-slate-700 rounded-xl ${doneClass[align]}`} />
+      </div>
+    </div>
+  );
 };
 
 export default ProgressBar;
