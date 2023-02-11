@@ -53,7 +53,7 @@ export const Navbar = () => {
                 </li>
               </div>
               <div
-                className={`absolute top-0 left-0 h-full w-full p-5 lg:hidden ${backdropFilter}`}
+                className={`ui-not-open:hidden absolute top-0 left-0 h-full w-full p-5 lg:hidden ${backdropFilter}`}
               >
                 <Transition
                   enter="transition duration-100 ease-out"

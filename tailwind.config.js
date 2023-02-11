@@ -6,33 +6,33 @@ module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      width: {},
       colors,
       animation: {
-        "toggle-visibility": "toggle-transitioned 1s infinite",
+        "toggle-visibility": "toggle-transitioned .5s infinite",
+        "grow-y": "grow-y 1s ease-out forwards",
+        "grow-x": "grow-x 1s ease-out forwards",
       },
       keyframes: {
         "toggle-transitioned": {
           "0%, 50%": { visibility: "hidden" },
           "51%": { visibility: "visible" },
         },
+        "grow-y": {
+          from: {
+            transform: "scaleY(0)",
+          },
+        },
+        "grow-x": {
+          from: {
+            transform: "scaleX(0)",
+          },
+        },
       },
     },
   },
   plugins: [
     require("@headlessui/tailwindcss"),
-    plugin(({ e, addUtilities }) => {
-      const list = [...Array(100).keys()];
-      const widthWithPercentage = list.map((x) => {
-        return {
-          [`.${e(`w-${x}%`)}`]: {
-            width: `${x}%`,
-          },
-        };
-      });
-
-      addUtilities(widthWithPercentage);
-    }),
+    require("./src/tailwind/packages/percentWidth"),
   ],
   darkMode: "class",
 };

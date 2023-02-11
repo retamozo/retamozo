@@ -5,7 +5,7 @@ const Layout: FunctionComponent<PropsWithChildren> = ({ children }) => {
   return (
     <>
       <Navbar />
-      {children}
+      <main>{children}</main>
       <Footer />
     </>
   );

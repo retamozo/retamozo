@@ -3,11 +3,7 @@ import { Timeline } from "@/components/Timeline";
 import { AnitamedLayout } from "@/layouts/v1/Animated";
 
 const Journey = () => {
-  return (
-    <AnitamedLayout>
-      <Timeline />
-    </AnitamedLayout>
-  )
+  return <Timeline />;
 };
 
 export default Journey;
