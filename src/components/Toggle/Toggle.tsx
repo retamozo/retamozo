@@ -17,10 +17,10 @@ export const Toggle: FunctionComponent<
       <Switch
         as="button"
         checked={enabled}
-        // onChange={setEnabled}
-        // onClick={onThemeChange}
-        onMouseLeave={(e) => console.log("on mouse leave")}
-        onMouseEnter={(e) => console.log("onMouse enter")}
+        // // onChange={setEnabled}
+        // // onClick={onThemeChange}
+        // onMouseLeave={(e) => console.log("on mouse leave")}
+        // onMouseEnter={(e) => console.log("onMouse enter")}
         className={`${
           enabled ? "bg-white" : "bg-gray-300"
         } relative inline-flex h-6 w-11 items-center rounded-full border-spacing-1`}
