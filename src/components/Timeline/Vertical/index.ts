@@ -1,1 +1,1 @@
-export { default as VerticalTimeline } from "./Vertical";
+export { default as VerticalContainer } from "./Vertical";

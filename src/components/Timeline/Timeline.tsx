@@ -1,34 +1,42 @@
-import React, { FunctionComponent, PropsWithChildren, ReactNode } from "react";
+import React, {
+  Children,
+  FunctionComponent,
+  isValidElement,
+  PropsWithChildren,
+  ReactElement,
+  ReactNode,
+} from "react";
 import { TimelieElements } from "@/data/timeline";
-import Vertical from "./Vertical/Vertical";
+import { VerticalContainer } from "./Vertical";
+import { HorizontalContainer } from "./Horizontal";
 
-type Align = "vertical" | "horizontal";
+const validChildrenTypes = [VerticalContainer, HorizontalContainer];
+
+/**
+ * variants "distributed" | alignLeft | alignRight
+ *
+ *
+ *
+ */
+
 interface TimelineProps {
-  /**
-   * variants "distributed" | alignLeft | alignRight
-   *
-   *
-   *
-   */
-  data: unknown[];
-  dotItems: ReactNode[];
-  align?: Align;
+  children: JSX.Element;
 }
 
 // TODO it could be less prop drilling  by composition
 const Timeline: FunctionComponent<PropsWithChildren<TimelineProps>> = ({
-  data,
-  dotItems,
-  align = "vertical",
+  children,
 }) => {
-  const componentMap: Record<Align, JSX.Element> = {
-    vertical: (
-      <Vertical elements={data as TimelieElements[]} dotItems={dotItems} />
-    ),
-    horizontal: <p>horizontal</p>,
-  };
+  // stufff with context. Further implementation
+  const isValidChildren = validChildrenTypes.includes(children?.type);
 
-  return componentMap[align];
+  if (!children || !isValidChildren) {
+    throw new Error(
+      "You must provide either Vertical or Horizontal wrapper component provided by the API"
+    );
+  }
+
+  return Children.only(children);
 };
 
 export default Timeline;

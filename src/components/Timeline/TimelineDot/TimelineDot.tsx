@@ -1,21 +1,51 @@
-import React, { FunctionComponent, ReactNode } from "react";
+import React, {
+  cloneElement,
+  createElement,
+  FunctionComponent,
+  isValidElement,
+  ReactNode,
+  useCallback,
+} from "react";
 
-interface Props {
+interface TTimelineDot<TDot> {
   dotItems: ReactNode[];
+  onClick?: () => ReactNode;
 }
 
-const TimelineDot: FunctionComponent<Props> = ({ dotItems }) => {
+function TimelineDot<TDotElement>({
+  dotItems,
+  onClick,
+}: TTimelineDot<TDotElement>) {
+  const onItemClick = useCallback(() => {
+    onClick?.();
+  }, [onClick]);
+
   return (
     <>
       {dotItems.map((el, i) => {
         return (
-          <div key={i} className="flex flex-col justify-center">
+          <div
+            key={i}
+            className="flex flex-col justify-center"
+            onClick={onItemClick}
+          >
             {el}
           </div>
         );
       })}
     </>
   );
-};
+}
 
 export default TimelineDot;
+// (
+//   <>
+//     {dotItems.map((el, i) => {
+//       return (
+//         <div key={i} className="flex flex-col justify-center">
+//           {el}
+//         </div>
+//       );
+//     })}
+//   </>
+// );

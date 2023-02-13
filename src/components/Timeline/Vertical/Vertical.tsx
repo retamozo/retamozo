@@ -1,19 +1,21 @@
-import React, { FunctionComponent, ReactNode } from "react";
+import React, { PropsWithChildren, ReactNode } from "react";
 import verticalClasses from "./styles.module.css";
-import { TimelieElements, timelineData } from "@/data/timeline";
 import { cls } from "@/utils";
-import { TimelineDot } from "../TimelineDot";
-import { TimelineItem } from "../TimelineItem";
 
-interface VerticalProps {
-  elements: TimelieElements[];
-  dotItems: ReactNode[];
+interface VerticalProps<TElementsData> {
+  elements: TElementsData[];
+  renderItem: (item: TElementsData, elementIndex: number) => ReactNode;
+  renderTimelineDots: ReactNode;
 }
 
-const Vertical: FunctionComponent<VerticalProps> = ({ elements, dotItems }) => {
+function Vertical<TElementsData>({
+  elements,
+  renderItem,
+  renderTimelineDots,
+}: VerticalProps<TElementsData>) {
   return (
     <div
-      role={"grid"}
+      role="grid"
       className={cls(
         verticalClasses.timelineContainer,
         "container mx-auto p-5 overflow-x-hidden"
@@ -30,16 +32,15 @@ const Vertical: FunctionComponent<VerticalProps> = ({ elements, dotItems }) => {
       >
         <div className="h-full text-center m-auto">
           <div className="bg-slate-300 h-full rounded-t-xl w-2 m-auto relative grid">
-            {!!elements.length && <TimelineDot dotItems={dotItems} />}
+            {!!elements.length && renderTimelineDots && (
+              <>{renderTimelineDots}</>
+            )}
           </div>
         </div>
       </div>
-
-      {timelineData.map((data, i) => (
-        <TimelineItem data={data} index={i} key={data.id} />
-      ))}
+      {elements.map((data, elementIndex) => renderItem(data, elementIndex))}
     </div>
   );
-};
+}
 
 export default Vertical;

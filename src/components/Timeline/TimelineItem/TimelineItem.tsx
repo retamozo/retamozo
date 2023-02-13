@@ -1,22 +1,28 @@
-import React, { FunctionComponent, useRef } from "react";
+import React, { FunctionComponent, PropsWithChildren, useRef } from "react";
 import timelineItemClasses from "./styles.module.css";
 import { TimelieElements } from "@/data/timeline";
 import { useIntersectionObserver } from "@/hooks";
 import { LinkIcon } from "@heroicons/react/20/solid";
 import { cls } from "@/utils";
 
-const TimelineItem: FunctionComponent<{
-  data: TimelieElements;
-  index: number;
-}> = (props) => {
+const TimelineItem: FunctionComponent<
+  PropsWithChildren<TimelieElements & { elementIndex: number }>
+> = (props) => {
   const timelineRef = useRef<HTMLDivElement | null>(null);
 
-  const {
-    data: { date, description, icon, id, location, tag, title, hasMoreInfo },
-    index,
-  } = props;
-
   const entry = useIntersectionObserver(timelineRef, {});
+
+  const {
+    date,
+    description,
+    icon,
+    id,
+    location,
+    tag,
+    title,
+    hasMoreInfo,
+    elementIndex,
+  } = props;
 
   const toggleVisibility = entry?.isIntersecting
     ? timelineItemClasses.show
@@ -34,9 +40,9 @@ const TimelineItem: FunctionComponent<{
       )}
       style={{
         // not sure how to do this with css.
-        gridRow: index + 1,
+        gridRow: elementIndex + 1,
       }}
-      tabIndex={index + 1}
+      tabIndex={elementIndex + 1}
     >
       <header>
         <div className="flex justify-between">
