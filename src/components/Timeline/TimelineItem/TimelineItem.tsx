@@ -30,7 +30,7 @@ const TimelineItem: FunctionComponent<{
       className={cls(
         timelineItemClasses.container,
         toggleVisibility,
-        "h-auto w-10/12 lg:h-5/6 sm:w-90% snap-center shadow-md rounded-md p-5 m-auto bg-zinc-900"
+        "h-auto w-10/12 lg:h-5/6 sm:w-90% snap-center shadow-md rounded-md p-5 m-auto dark:bg-zinc-900 flex flex-col justify-between"
       )}
       style={{
         // not sure how to do this with css.
