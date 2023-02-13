@@ -1,0 +1,22 @@
+.timelineContainer {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 10% 90%;
+  overflow-y: scroll;
+  max-height: 30rem;
+  overscroll-behavior-y: contain;
+  scroll-snap-type: y proximity;
+}
+
+.progressBar {
+  grid-column: 1;
+}
+
+@media all and (min-width: 640px) {
+  .timelineContainer {
+    grid-template-columns: 3fr 0.5fr 3fr;
+  }
+  .progressBar {
+    grid-column: 2;
+  }
+}

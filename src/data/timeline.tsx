@@ -31,7 +31,7 @@ const iconMap: Record<IconKind, ReactElement> = {
   training: <CommandLineIcon {...className} />,
 };
 
-type TimelieElements = {
+export type TimelieElements = {
   id: number;
   tag: Tag[];
   location: string;

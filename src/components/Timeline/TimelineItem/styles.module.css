@@ -1,0 +1,19 @@
+.hidden {
+  opacity: 0;
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  transition: all 1s;
+}
+
+@media all and (min-width: 640px) {
+  .container:nth-of-type(even) {
+    grid-column: 3;
+  }
+
+  .container:nth-of-type(odd) {
+    grid-column: 1;
+  }
+}
