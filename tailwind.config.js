@@ -8,7 +8,7 @@ module.exports = {
     extend: {
       colors,
       animation: {
-        "toggle-visibility": "toggle-transitioned .5s infinite",
+        "toggle-visibility": "toggle-transitioned 1.5s infinite",
         "grow-y": "grow-y 1s ease-out forwards",
         "grow-x": "grow-x 1s ease-out forwards",
       },
