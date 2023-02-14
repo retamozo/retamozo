@@ -14,15 +14,14 @@ html {
 }
 
 main {
-  height: auto;
+  padding-bottom: 2.5rem;
   box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  height: 100%;
 }
 
 #__next {
-  /* height: 100vh; */
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 10% 80% 10%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }

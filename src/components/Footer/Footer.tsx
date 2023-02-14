@@ -25,7 +25,7 @@ const LINKS = [
 
 export const Footer = () => {
   return (
-    <footer className="flex h-[150px] justify-center items-center bg-neutrals-100 text-sm">
+    <footer className="absolute bottom-0 h-20 w-full justify-center items-center bg-neutrals-100 text-sm">
       <article className="flex flex-col text-center p-2">
         <div className="text-5xl flex justify-center gap-3 mb-3">
           {LINKS.map(({ element, href, key }) => {
