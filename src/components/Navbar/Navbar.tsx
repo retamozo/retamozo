@@ -11,14 +11,17 @@ import { LIST } from "./links";
 
 export const Navbar = () => {
   return (
-    <Disclosure as="header" className="container mx-auto overscroll-contain">
+    <Disclosure
+      as="header"
+      className="h-20 container mx-auto overscroll-contain"
+    >
       {({ open }) => {
         // Use ui:open tailwind class instead
         const backdropFilter = open
           ? "z-10 backdrop-filter backdrop-blur-2xl"
           : "z-0";
         return (
-          <nav className={`p-5 text-2xl lg:text-3xl `}>
+          <nav className="p-5 text-2xl lg:text-3xl h-full">
             <menu className="flex p-1 justify-between items-center ">
               <div className="flex z-10">
                 <li>
@@ -96,10 +99,6 @@ export const Navbar = () => {
 const MobileIcon: FunctionComponent<PropsWithChildren<{ open: boolean }>> = ({
   open,
 }) => {
-  useEffect(() => {
-    document.body.style.overflow = open ? "hidden" : "scroll";
-  }, [open]);
-
   return open ? (
     <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
   ) : (
