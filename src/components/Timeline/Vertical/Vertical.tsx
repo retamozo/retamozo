@@ -21,14 +21,14 @@ function Vertical<TElementsData>({
         "container mx-auto p-5 overflow-x-hidden"
       )}
       style={{
-        gridTemplateRows: `repeat(${elements.length}, minmax(250px, auto))`,
+        gridTemplateRows: `repeat(${elements.length}, minmax(1fr, auto))`,
       }}
     >
       <div
-        className={cls(
-          verticalClasses.progressBar,
-          "relative row-span-full h-full"
-        )}
+        className={cls(verticalClasses.progressBar, "relative h-full")}
+        style={{
+          gridRow: `1 / ${elements.length + 1}`,
+        }}
       >
         <div className="h-full text-center m-auto">
           <div className="bg-slate-300 h-full rounded-t-xl w-2 m-auto relative grid">
