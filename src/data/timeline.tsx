@@ -39,7 +39,6 @@ export type TimelieElements = {
   description: string;
   date: string;
   icon: ReactElement;
-  hasMoreInfo?: boolean;
 };
 
 type CreateAnchor = (
@@ -70,7 +69,6 @@ export const timelineData: TimelieElements[] = [
     date: "March, 2015",
     icon: iconMap["education"],
     location: "Buenos Aires, Argentina 🇦🇷",
-    hasMoreInfo: true,
   },
   {
     id: 2,
@@ -82,7 +80,8 @@ export const timelineData: TimelieElements[] = [
       </>
     ),
     date: "March, 2018",
-    description: "description",
+    description:
+      "My first proffesional approach to web programming and the community from Argentina. ",
     icon: iconMap["training"],
     location: "Buenos Aires, Argentina 🇦🇷",
   },
@@ -98,16 +97,20 @@ export const timelineData: TimelieElements[] = [
       </>
     ),
     date: "October 2018",
-    description: "First approach in the IT industry",
+    description: `Met incredible and talented people I could learn from.
+    Definitely a thing you can label as 'start with the right foot'.
+    As a CX Oracle consultant, my first and foremost ç
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Id aspernatur nostrum voluptatum,
+    harum ratione nihil culpa natus ipsam iure modi sapiente incidunt delectus nobis aut ex,
+    tempore debitis maxime aliquid.`,
     icon: iconMap["bigOffice"],
     location: "Buenos Aires, Argentina 🇦🇷",
-    hasMoreInfo: true,
   },
   {
     id: 4,
     tag: ["localCompany", "engineering"],
     date: "October 2019",
-    title: "Frontend Developer",
+    title: "Frontend Developer, Fizzmod",
     description: "Joined the ecommerce world ",
     icon: iconMap["smallOffice"],
     location: "Buenos Aires, Argentina 🇦🇷",
@@ -116,10 +119,9 @@ export const timelineData: TimelieElements[] = [
     id: 5,
     tag: ["fintech", "start up"],
     date: "October 2019",
-    title: "Frontend Developer | Team Lead",
+    title: "Frontend Developer / Team Lead, Blockfi",
     description: "One of my most meaningful experiences",
     icon: iconMap["bigOffice"],
     location: "Remote",
-    hasMoreInfo: true,
   },
 ];
