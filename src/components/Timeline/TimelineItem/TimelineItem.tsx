@@ -10,7 +10,7 @@ const TimelineItem: FunctionComponent<
   const timelineRef = useRef<HTMLDivElement | null>(null);
 
   const { shortenText, isBigText, showLargeText, isShowingMore } =
-    useReadMoreReadLess(props.description, 200);
+    useReadMoreReadLess(props.description, 150);
 
   const entry = useIntersectionObserver(timelineRef, {});
 

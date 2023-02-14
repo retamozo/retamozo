@@ -65,7 +65,10 @@ export const timelineData: TimelieElements[] = [
     id: 1,
     tag: ["university", "design"],
     title: "Da Vinci, Art School",
-    description: "Degree in Multimedia Art, not finished.",
+    description: `Here's where everything started.
+    I remember to have created my first static pages with HTML and CSS during web design classes.
+    These subjects such as UI Design and Web Programming caught my attention completely and I felt like 'ok, definitely I need to know more'.
+    `,
     date: "March, 2015",
     icon: iconMap["education"],
     location: "Buenos Aires, Argentina 🇦🇷",
@@ -80,8 +83,10 @@ export const timelineData: TimelieElements[] = [
       </>
     ),
     date: "March, 2018",
-    description:
-      "My first proffesional approach to web programming and the community from Argentina. ",
+    description: `My first proffesional approach to web programming and the community from Argentina.
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima tenetur corrupti officia quasi, eligendi facere molestiae ratione. Sed, id consequatur? Architecto quod quibusdam ab? Enim minima culpa perferendis quasi asperiores.
+
+      `,
     icon: iconMap["training"],
     location: "Buenos Aires, Argentina 🇦🇷",
   },
