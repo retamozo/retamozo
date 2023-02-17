@@ -8,7 +8,7 @@ export const Hero = () => {
       src={Enzito}
       alt="Handsome guy"
       aria-label="prfile image"
-      className="rounded-full w-80 h-80 mx-auto overflow-hidden"
+      className="rounded-full w-60 h-60 md:w-80 md:h-80 mx-auto overflow-hidden"
       style={{
         objectFit: "cover",
       }}

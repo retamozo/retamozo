@@ -1,7 +1,17 @@
 import { IconMoonFilled, IconSunFilled } from "@tabler/icons-react";
 import { ReactNode } from "react";
 import { ThemeSwitcher } from "../ThemeSwitcher";
-const LanguageSwitcher = () => <p>en/es</p>;
+const LanguageSwitcher = () => (
+  <div>
+    <a className="active:underline underline-offset-4" href="#">
+      en
+    </a>
+    <span> / </span>
+    <a className="active:underline underline-offset-4" href="#">
+      es
+    </a>
+  </div>
+);
 
 type NavBarItems = {
   to?: string;

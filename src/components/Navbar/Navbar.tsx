@@ -1,9 +1,4 @@
-import React, {
-  Fragment,
-  FunctionComponent,
-  PropsWithChildren,
-  useEffect,
-} from "react";
+import React, { Fragment, FunctionComponent, PropsWithChildren } from "react";
 import Link from "next/link";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/20/solid";
 import { Disclosure, Transition } from "@headlessui/react";
@@ -68,11 +63,7 @@ export const Navbar = () => {
                 >
                   <Disclosure.Panel as="div" className="left-0">
                     {LIST.map(({ key, children, to }) => {
-                      const child = (
-                        <li className="my-2 underline underline-offset-4">
-                          {children}
-                        </li>
-                      );
+                      const child = <li className="my-2 ">{children}</li>;
                       return (
                         <Fragment key={key}>
                           {to ? (
