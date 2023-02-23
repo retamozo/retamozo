@@ -4,6 +4,7 @@ import {
   IconBrandGithub,
   IconBrandGmail,
 } from "@tabler/icons-react";
+import { useTranslation } from "next-i18next";
 
 const LINKS = [
   {
@@ -24,6 +25,7 @@ const LINKS = [
 ];
 
 export const Footer = () => {
+  const { t } = useTranslation('footer')
   return (
     <footer className="flex h-full w-full justify-center items-center bg-neutrals-100 text-sm">
       <article className="flex flex-col text-center p-2">
@@ -42,7 +44,7 @@ export const Footer = () => {
             );
           })}
         </div>
-        <p>Talk less. Do more @ {new Date().getFullYear()}</p>
+        <p>{t("label")} {new Date().getFullYear()}</p>
       </article>
     </footer>
   );

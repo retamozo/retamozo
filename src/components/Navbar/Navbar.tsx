@@ -2,9 +2,10 @@ import React, { Fragment, FunctionComponent, PropsWithChildren } from "react";
 import Link from "next/link";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/20/solid";
 import { Disclosure, Transition } from "@headlessui/react";
-import { LIST } from "./links";
+import { useNavbarLinks } from "./links";
 
 export const Navbar = () => {
+  const LINKS = useNavbarLinks()
   return (
     <Disclosure
       as="header"
@@ -29,7 +30,7 @@ export const Navbar = () => {
                 </li>
               </div>
               <div className="hidden lg:w-1/2 lg:flex lg:justify-around items-center align-middle">
-                {LIST.map(({ key, children, to }) => {
+                {LINKS.map(({ key, children, to }) => {
                   const child = (
                     <li className="mt-1 hover:underline underline-offset-4">
                       {children}
@@ -62,7 +63,7 @@ export const Navbar = () => {
                   leaveTo="transform scale-95 opacity-0"
                 >
                   <Disclosure.Panel as="div" className="left-0">
-                    {LIST.map(({ key, children, to }) => {
+                    {LINKS.map(({ key, children, to }) => {
                       const child = <li className="my-2 ">{children}</li>;
                       return (
                         <Fragment key={key}>

@@ -4,8 +4,9 @@ import type { AppProps } from "next/app";
 import { ThemeProvider } from "next-themes";
 import { Layout } from "@/layouts/v1/Base";
 import { AnimatePresence } from "framer-motion";
+import { appWithTranslation } from "next-i18next"
 
-export default function App({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider attribute="class">
       <Layout>
@@ -24,3 +25,5 @@ export default function App({ Component, pageProps }: AppProps) {
     </ThemeProvider>
   );
 }
+
+export default appWithTranslation(App)

@@ -1,7 +1,8 @@
 import React from "react";
-import { Hero } from "@/components";
+import { Hero, Main } from "@/components";
 import Head from "next/head";
-import { AnitamedLayout } from "@/layouts/v1/Animated";
+import { GetStaticProps } from "next/types";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 export default function Home() {
   return (
@@ -12,14 +13,23 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <section className="text-center px-10">
-        <h2 className="text-3xl md:text-5xl py-2 font-medium">Enzo Retamozo</h2>
-        <h3 className="text-2xl py-2">frontend developer & amateur writer.</h3>
-        <p className="text-md leading-8 text-gray-800"></p>
-      </section>
+      <Main />
       <section>
         <Hero />
       </section>
     </div>
   );
+}
+
+type StaticProps = {
+  locale: string;
+};
+
+export async function getStaticProps({ locale }: StaticProps) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["main", "footer", "navbar"])),
+      // Will be passed to the page component as props
+    },
+  };
 }
