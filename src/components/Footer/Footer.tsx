@@ -44,7 +44,7 @@ export const Footer = () => {
             );
           })}
         </div>
-        <p>{t("label")} {new Date().getFullYear()}</p>
+        <p>{t("label")} © {new Date().getFullYear()}</p>
       </article>
     </footer>
   );

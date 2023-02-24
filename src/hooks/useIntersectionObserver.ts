@@ -28,7 +28,7 @@ export const useIntersectionObserver = (
   useEffect(() => {
     const node = ref?.current;
 
-    if (node !== null) {
+    if (node !== null && !freezeOnVisible) {
       const observer = new IntersectionObserver(updateEntry, {
         root,
         rootMargin,

@@ -1,12 +1,4 @@
-import React, {
-  Children,
-  FunctionComponent,
-  isValidElement,
-  PropsWithChildren,
-  ReactElement,
-  ReactNode,
-} from "react";
-import { TimelieElements } from "@/data/timeline";
+import { Children, FunctionComponent, PropsWithChildren } from "react";
 import { VerticalContainer } from "./Vertical";
 import { HorizontalContainer } from "./Horizontal";
 

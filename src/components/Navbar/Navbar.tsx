@@ -2,11 +2,10 @@ import React, { Fragment, FunctionComponent, PropsWithChildren } from "react";
 import Link from "next/link";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/20/solid";
 import { Disclosure, Transition } from "@headlessui/react";
-import { useNavbarLinks } from "./links";
+import { navbarItems } from "./links";
 
 export const Navbar = () => {
-  const { LIST: LINKS } = useNavbarLinks();
-  return (
+   return (
     <Disclosure
       as="header"
       className="h-20 container mx-auto overscroll-contain"
@@ -30,7 +29,7 @@ export const Navbar = () => {
                 </li>
               </div>
               <div className="hidden lg:w-1/2 lg:flex lg:justify-around items-center align-middle">
-                {LINKS.map(({ key, children, to }) => {
+                {navbarItems.map(({ key, children, to }) => {
                   const child = (
                     <li className="mt-1 hover:underline underline-offset-4">
                       {children}
@@ -63,7 +62,7 @@ export const Navbar = () => {
                   leaveTo="transform scale-95 opacity-0"
                 >
                   <Disclosure.Panel as="div" className="left-0">
-                    {LINKS.map(({ key, children, to }) => {
+                    {navbarItems.map(({ key, children, to }) => {
                       const child = <li className="my-2 ">{children}</li>;
                       return (
                         <Fragment key={key}>
