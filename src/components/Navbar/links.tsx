@@ -1,14 +1,29 @@
 import { IconMoonFilled, IconSunFilled } from "@tabler/icons-react";
 import { useTranslation } from "next-i18next";
-import { ReactNode } from "react";
+import { useRouter } from "next/router";
+import { FunctionComponent, ReactNode, useCallback } from "react";
 import { ThemeSwitcher } from "../ThemeSwitcher";
-const LanguageSwitcher = () => (
+import { Path } from "./const";
+
+type Props = {
+  onChangeLanguage: (locale: string) => void;
+};
+
+const LanguageSwitcher: FunctionComponent<Props> = ({ onChangeLanguage }) => (
   <div>
-    <a className="active:underline underline-offset-4" href="#">
+    <a
+      className="active:underline underline-offset-4"
+      href="#"
+      onClick={() => onChangeLanguage("en-US")}
+    >
       en
     </a>
     <span> / </span>
-    <a className="active:underline underline-offset-4" href="#">
+    <a
+      className="active:underline underline-offset-4"
+      href="#"
+      onClick={() => onChangeLanguage("es-AR")}
+    >
       es
     </a>
   </div>
@@ -20,11 +35,18 @@ type NavBarItems = {
   key: string;
 };
 
-
 export const useNavbarLinks = () => {
-  const { t } = useTranslation("navbar")
+  const { t } = useTranslation("navbar");
+  const { push, asPath } = useRouter();
 
-   const LIST: NavBarItems[] = [
+  const changeTranslation = useCallback(
+    (locale: string) => {
+      push(asPath, asPath, { locale });
+    },
+    [asPath, push]
+  );
+
+  const LIST: NavBarItems[] = [
     {
       key: "theme",
       children: (
@@ -53,25 +75,27 @@ export const useNavbarLinks = () => {
     },
     {
       key: "language",
-      children: <LanguageSwitcher />,
+      children: <LanguageSwitcher onChangeLanguage={changeTranslation} />,
     },
     {
-      to: "/journey",
+      to: Path.Journey,
       key: "myjourney",
       children: t("timeline"),
     },
     {
-      to: "/articles",
+      to: Path.Articles,
       key: "articles",
       children: t("article"),
     },
     {
-      to: "/narratives",
+      to: Path.Narratives,
       key: "narratives",
       children: t("narratives"),
     },
   ];
-  
-  return LIST
-  
-}
+
+  return {
+    LIST,
+    changeTranslation,
+  };
+};

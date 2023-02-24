@@ -29,7 +29,6 @@ export async function getStaticProps({ locale }: StaticProps) {
   return {
     props: {
       ...(await serverSideTranslations(locale, ["main", "footer", "navbar"])),
-      // Will be passed to the page component as props
     },
   };
 }

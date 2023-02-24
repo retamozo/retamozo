@@ -1,4 +1,6 @@
 import React from "react";
+import { GetStaticProps } from "next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 const Narratives = () => {
   return (
@@ -151,3 +153,11 @@ const Narratives = () => {
 };
 
 export default Narratives;
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale!, ["footer", "navbar"])),
+    },
+  };
+};

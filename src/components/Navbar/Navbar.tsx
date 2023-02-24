@@ -5,7 +5,7 @@ import { Disclosure, Transition } from "@headlessui/react";
 import { useNavbarLinks } from "./links";
 
 export const Navbar = () => {
-  const LINKS = useNavbarLinks()
+  const { LIST: LINKS } = useNavbarLinks();
   return (
     <Disclosure
       as="header"
