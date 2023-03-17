@@ -8,5 +8,6 @@ module.exports = {
         : "/public/locales",
   },
   localeStructure: "{{lng}}/{{ns}}",
-  reloadOnPrerender: true
+  reloadOnPrerender: true,
+  keySeparator: ".",
 };

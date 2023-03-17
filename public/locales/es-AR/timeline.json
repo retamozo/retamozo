@@ -1,8 +1,37 @@
 {
-    "davinci": "alta facu compa",
-    "acamica": "estuvo re piola el bootcamp",
-    "oracle": "mamadera como me rasque los huevos",
-    "fizzmod": "aca fueroon unos forros pero messirvio",
-    "blockfi": "ahhh como renege con este lugar y como lo quisee"
+  "davinci": {
+    "key": "davinci",
+    "title": "Escuela Da Vinci, Diseño Multimedia",
+    "description": "Acá empezó todo. Tuve mis primeros encuentros con el desarrollo web en materias como Diseño UX/UI y Programación Web Básica. Despertó mi curiosidad y fue el trigger que necesitaba para empezar a indagar este nicho por mi cuenta",
+    "date": "2015, Marzo",
+    "tags": ["universidad", "diseño"]
+  },
+  "acamica": {
+    "key": "acamica",
+    "title": "Bootcamp Full Stack",
+    "description": "Ya un poco orientado y con un par de cursos hechos, decidí inscribirme en el bootcamp fullstack de Acámica (hoy conocida como Digital House) donde no solo aprendí a crear apps desde cero (con HTML, CSS, Javascript, MongoDB y Mysql), sino también cómo es el ciclo de desarrollo de un producto tecnológico y qué hay detrás de ello.",
+    "date": "2018, Marzo",
+    "tags": ["bootcamp", "web", "fullstack", "javascript", "novato"]
+  },
+  "oracle": {
+    "key": "oracle",
+    "title": "Frontend Developer, CX Consultant (Oracle Commerce Cloud)",
+    "description": "Mi primera experiencia laboral en el mundo IT. Fue sin dudas una excelente forma de empezar mi carrera. Tuve la experiencia de trabajar para una gran corporación, y absorver esa cultura laborar global y remota que era totalmente desconocida para mi en aquel entonces. Formé parte del equipo de CX trabajando con Oracle Commerce Cloud, una solución eCommerce con gran variedad de soluciones out-of-box para merchants pequeños, medianos y grandes. Me llevé grandes experiencias y buenos amigos.",
+    "date": "2018, Octubre",
+    "tags": ["bigTech", "ecommerce", "consultant"]
+  },
+  "fizzmod": {
+    "key": "fizzmod",
+    "title": "Frontend Developer",
+    "description": "Decidí irme de Oracle a una empresa más pequeña para poder explotar aun más mis habilidades en el universo web y eCommerce, esta vez con la plataforma Vtex.",
+    "date": "2019, Octubre",
+    "tags": ["ecommerce", "vtex", "frontend"]
+  },
+  "blockfi": {
+    "key": "blockfi",
+    "title": "Frontend Team Lead",
+    "description": "Una de las experiencias que siempre recordaré con mucho cariño. Crecí tanto profesionalmente como en lo personal. Entré como JR Frontend Developer, participé en la creación de dos apps desde cero, desde su diseño, planificación, desarrollo y pasaje a producción. Con el tiempo, fui escalando en la compañia hasta llegar a la posición de Frontend Lead de mi equipo (Onboarding and Compliance).",
+    "date": "2020, Enero",
+    "tags": ["fintech", "startup", "crypto"]
   }
-  
+}

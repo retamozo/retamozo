@@ -1,7 +1,37 @@
 {
-  "davinci": "Here's where everything started. I remember to have created my first static pages with HTML and CSS during web design classes. These subjects such as UI Design and Web Programming caught my attention completely and I felt like 'ok, definitely I need to know more'.",
-  "acamica": "My first proffesional approach to web programming and the community from Argentina. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima tenetur corrupti officia quasi, eligendi facere molestiae ratione. Sed, id consequatur? Architecto quod quibusdam ab? Enim minima culpa perferendis quasi asperiores.",
-  "oracle": "Met incredible and talented people I could learn from. Definitely a thing you can label as 'start with the right foot'. As a CX Oracle consultant, my first and foremost ç Lorem ipsum dolor sit amet consectetur adipisicing elit. Id aspernatur nostrum voluptatum, harum ratione nihil culpa natus ipsam iure modi sapiente incidunt delectus nobis aut ex, tempore debitis maxime aliquid.",
-  "fizzmod": "Joined the ecommerce world",
-  "blockfi": "One of my most meaningful experiences"
+  "davinci": {
+    "key": "davinci",
+    "title": "Da Vinci, Art School",
+    "description": "Here's where everything started. I remember to have created a few static pages with HTML and CSS during web design classes. These subjects such as UI/UX Design and Web Programming caught my attention completely and I felt like 'ok, definitely I need to know more'.",
+    "date": "March 2015",
+    "tags": ["assicateDegree", "desgin", "firstSteps"]
+  },
+  "acamica": {
+    "key": "acamica",
+    "title": "Full Stack bootcamp",
+    "description": "My first proffesional approach to web programming and the community from Argentina. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima tenetur corrupti officia quasi, eligendi facere molestiae ratione. Sed, id consequatur? Architecto quod quibusdam ab? Enim minima culpa perferendis quasi asperiores.",
+    "date": "March 2018",
+    "tags": ["bootcamp", "web", "fullstack", "javascript"]
+  },
+  "oracle": {
+    "key": "oracle",
+    "title": "Frontend Developer, CX Consultant (Oracle Commerce Cloud)",
+    "description": "I met incredible and very talented people I could learn from. Definitely a thing you can label as 'start with the right foot'. As a CX consultant at Oracle, my role was divided pretty much in two parts: in one hand, I had to attend all client's concerns and help them out with they desired configurations over the Oracle eCommerce Cloud. Second, any custom behaviour our tool could not doing out of the box should be coded from scratch. And right there is how I come as Frontend Developer officially.",
+    "date": "October 2018",
+    "tags": ["corp", "engineering", "ecommerce", "consultant"]
+  },
+  "fizzmod": {
+    "key": "fizzmod",
+    "title": "Frontend Developer",
+    "description": "I continued in the eCommerce world for a bit more. I got my first experiences with React and Redux, and I joined a pretty small team with a higher ownership than any experience I had.",
+    "date": "October, 2019",
+    "tags": ["ecommerce", "vtex", "frontend"]
+  },
+  "blockfi": {
+    "key": "blockfi",
+    "title": "Frontend Team Lead",
+    "description": "One of my most meaningful experiences. I learned from worldclass engineers as well as I could growth as not only Frontend engineer but also as individual. I joined the Blockfi team as junior developer and I finished my career with 3 developers in charge, having built two applications from scratch.",
+    "date": "January, 2020",
+    "tags": ["fintech", "startup", "crypto"]
+  }
 }
