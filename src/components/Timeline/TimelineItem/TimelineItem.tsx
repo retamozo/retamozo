@@ -1,11 +1,11 @@
 import React, { FunctionComponent, PropsWithChildren, useRef } from "react";
 import timelineItemClasses from "./styles.module.css";
-import { TimelieElements } from "@/data/timeline";
 import { useIntersectionObserver, useReadMoreReadLess } from "@/hooks";
 import { cls } from "@/utils";
+import { TimelineElementsProps } from "../types";
 
 const TimelineItem: FunctionComponent<
-  PropsWithChildren<TimelieElements & { elementIndex: number }>
+  PropsWithChildren<TimelineElementsProps & { elementIndex: number }>
 > = (props) => {
   const timelineRef = useRef<HTMLDivElement | null>(null);
 
@@ -71,12 +71,12 @@ const TimelineItem: FunctionComponent<
             </div>
             <div className="TAGS AND CTA flex w-full justify-between">
               <div>
-                {!!tag.length &&
+                {/* {!!tag.length &&
                   tag.map((t) => (
                     <span className="text-sm text-orange-400" key={t}>
                       #{t}{" "}
                     </span>
-                  ))}
+                  ))} */}
               </div>
             </div>
           </div>

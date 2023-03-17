@@ -1,3 +1,5 @@
+import { GetStaticProps } from "next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import React from "react";
 
 const Articles = () => {
@@ -148,6 +150,14 @@ const Articles = () => {
       incidunt unde porro aut autem modi earum praesentium, ipsam ipsum.
     </div>
   );
+};
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale!, ["footer", "navbar"])),
+    },
+  };
 };
 
 export default Articles;

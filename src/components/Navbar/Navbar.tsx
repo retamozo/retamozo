@@ -3,18 +3,20 @@ import Link from "next/link";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/20/solid";
 import { Disclosure, Transition } from "@headlessui/react";
 import { navbarItems } from "./links";
+import { useRouter } from "next/router";
 
 export const Navbar = () => {
-   return (
+  const { route } = useRouter();
+
+  const currentPath = (to: string) =>
+    to === route ? "underline  underline-offset-4" : "";
+
+  return (
     <Disclosure
       as="header"
       className="h-20 container mx-auto overscroll-contain"
     >
       {({ open }) => {
-        // Use ui:open tailwind class instead
-        const backdropFilter = open
-          ? "z-10 backdrop-filter backdrop-blur-2xl"
-          : "z-0";
         return (
           <nav className="p-5 text-2xl lg:text-3xl h-full">
             <menu className="flex p-1 justify-between items-center ">
@@ -28,17 +30,23 @@ export const Navbar = () => {
                   </Link>
                 </li>
               </div>
-              <div className="hidden lg:w-1/2 lg:flex lg:justify-around items-center align-middle">
+              <div className="hidden lg:flex lg:justify-around items-center align-middle">
                 {navbarItems.map(({ key, children, to }) => {
-                  const child = (
-                    <li className="mt-1 hover:underline underline-offset-4">
-                      {children}
-                    </li>
-                  );
                   return (
-                    <Fragment key={key}>
-                      {to ? <Link href={to}>{child}</Link> : child}
-                    </Fragment>
+                    <div className="px-2" key={key}>
+                      {to ? (
+                        <li className={currentPath(to)}>
+                          <Link
+                            href={to}
+                            className="hover:underline underline-offset-4 mt-1"
+                          >
+                            {children}
+                          </Link>
+                        </li>
+                      ) : (
+                        <li>{children}</li>
+                      )}
+                    </div>
                   );
                 })}
               </div>
@@ -50,9 +58,7 @@ export const Navbar = () => {
                   </Disclosure.Button>
                 </li>
               </div>
-              <div
-                className={`ui-not-open:hidden absolute top-0 left-0 h-full w-full p-5 lg:hidden ${backdropFilter}`}
-              >
+              <div className="ui-not-open:hidden absolute top-0 left-0 h-full w-full p-5 lg:hidden z-0 ui-open:z-10 ui-open:backdrop-filter ui-open:backdrop-blur-2xl">
                 <Transition
                   enter="transition duration-100 ease-out"
                   enterFrom="transform scale-95 opacity-0"
@@ -63,7 +69,11 @@ export const Navbar = () => {
                 >
                   <Disclosure.Panel as="div" className="left-0">
                     {navbarItems.map(({ key, children, to }) => {
-                      const child = <li className="my-2 ">{children}</li>;
+                      const child = (
+                        <li className={`my-2 ${currentPath(to || "")}`}>
+                          {children}
+                        </li>
+                      );
                       return (
                         <Fragment key={key}>
                           {to ? (
