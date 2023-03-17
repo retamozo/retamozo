@@ -8,10 +8,10 @@ export const useTimelineData = (): {
   const { t } = useTranslation("timeline");
 
   const getTags = (target: string) =>
-    t<{ key: Tag[] }>(target, {
+    t(target, {
       defaultValue: "saraza",
       returnObjects: true,
-    });
+    }) as Tag;
 
   const timelineData: TimelineElementsProps[] = [
     {
