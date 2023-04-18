@@ -16,22 +16,29 @@
   "oracle": {
     "key": "oracle",
     "title": "Frontend Developer, CX Consultant (Oracle Commerce Cloud)",
-    "description": "I met incredible and very talented people I could learn from. Definitely a thing you can label as 'start with the right foot'. As a CX consultant at Oracle, my role was divided pretty much in two parts: in one hand, I had to attend all client's concerns and help them out with they desired configurations over the Oracle eCommerce Cloud. Second, any custom behaviour our tool could not doing out of the box should be coded from scratch. And right there is how I come as Frontend Developer officially.",
+    "description": "As soon I felt ready, I began seeking my first job and my place in the IT industry. I never imagined my journery would start at Oracle. As Frontend Engineer / Oracle Commerce Cloud Consultant (working with their giant, large-scale ecommerce tool, based in the cloud), my mission was to address all client concerns regarding the platform and work on customization for their sites. This experience provided me with valuable skills and insights that I continue to use today in my current role as a Frontend Engineer. In particular, my work on customizing the Oracle Commerce Cloud platform gave me a deep understanding of the ecommerce business and the importance of delivering an intuitive user experience.",
     "date": "October 2018",
     "tags": ["corp", "engineering", "ecommerce", "consultant"]
   },
   "fizzmod": {
     "key": "fizzmod",
     "title": "Frontend Developer",
-    "description": "I continued in the eCommerce world for a bit more. I got my first experiences with React and Redux, and I joined a pretty small team with a higher ownership than any experience I had.",
+    "description": "After a year at Oracle, and knowing where I want to led my career to, I joined Fizzmod after had been selected among 20 candidates in a intense React JS paid training. They opened two junior frontend positions and one of the selected ones was me. Their core business was focused around Ecommerce as well but this time partering with Vtex. As a junior developer, I worked as one of the maintainer of their legacy apps using Jquery, Javascript Vanilla and Vtex SDK's. And also got the chance to deliver features by using React JS and it's ecosystem, for some of their principal customers like Walmart and Jumbo.",
     "date": "October, 2019",
     "tags": ["ecommerce", "vtex", "frontend"]
   },
   "blockfi": {
     "key": "blockfi",
     "title": "Frontend Team Lead",
-    "description": "One of my most meaningful experiences. I learned from worldclass engineers as well as I could growth as not only Frontend engineer but also as individual. I joined the Blockfi team as junior developer and I finished my career with 3 developers in charge, having built two applications from scratch.",
+    "description": "Definitely, the most meaningful experience so far. I joined the Blockfi team as junior/mid-level Frontend Engineer in a pretty early stage, and after delivered our first product for institutional clients, I was promoted to a Team Lead position. I got three people in charge, and togheter we built an entire onboarding application from scratch  using Typescript and React (and leveraging the entire React ecosystem!). My role was based half heads down, and half managing and following up the team, planning and scoping our tasks. I learned the core concepts of SLDC and had the chance to learn from worldclass engineers. Blockfi filed for bankruptcy in December 2022.",
     "date": "January, 2020",
     "tags": ["fintech", "startup", "crypto"]
+  },
+  "coderio": {
+    "key": "coderio",
+    "title": "Senior Frontend Engineer",
+    "description": "Early February, I started a new charpter at Coderio, a Staff Augmentation company as Senior Frontend, exclusively bringing service to Dlocal, an stablished company that offers payments routing system solutions in the emergent market.",
+    "date": "February 2023",
+    "tags": ["payments"]
   }
 }

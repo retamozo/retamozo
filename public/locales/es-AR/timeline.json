@@ -33,5 +33,12 @@
     "description": "Una de las experiencias que siempre recordaré con mucho cariño. Crecí tanto profesionalmente como en lo personal. Entré como JR Frontend Developer, participé en la creación de dos apps desde cero, desde su diseño, planificación, desarrollo y pasaje a producción. Con el tiempo, fui escalando en la compañia hasta llegar a la posición de Frontend Lead de mi equipo (Onboarding and Compliance).",
     "date": "2020, Enero",
     "tags": ["fintech", "startup", "crypto"]
+  },
+  "coderio": {
+    "key": "coderio",
+    "title": "Frontend Engineer",
+    "description": "idk",
+    "date": "February 2023",
+    "tags": ["payments"]
   }
 }
