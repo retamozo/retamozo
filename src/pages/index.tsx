@@ -1,7 +1,6 @@
 import React from "react";
 import { Hero, Main } from "@/components";
 import Head from "next/head";
-import { GetStaticProps } from "next/types";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 export default function Home() {

@@ -1,16 +1,27 @@
 import { useChangeLanguage } from "@/hooks/useChangeLanguage";
-import { i18n } from "next-i18next";
+import { Langs } from "@/lang";
+import { cls } from "@/utils";
 import React, { FunctionComponent } from "react";
 
 const LanguageSwitcher: FunctionComponent = () => {
-  const { changeTranslation } = useChangeLanguage();
-
-  const langClassName = (lang: string) =>
-    i18n?.language === lang ? "underline underline-offset-4" : "";
+  const { changeTranslation, lngs, current } = useChangeLanguage();
 
   return (
     <div>
-      <a
+      {Object.keys(lngs).map((lng) => {
+        const underline = lng === current ? "underline underline-offset-4" : "";
+        return (
+          <a
+            role={"button"}
+            key={lng}
+            className={cls("mr-2", underline)}
+            onClick={() => changeTranslation(lng)}
+          >
+            {lngs[lng as Langs].label}
+          </a>
+        );
+      })}
+      {/* <a
         className={langClassName("en-US")}
         href="#"
         onClick={() => changeTranslation("en-US")}
@@ -24,7 +35,7 @@ const LanguageSwitcher: FunctionComponent = () => {
         onClick={() => changeTranslation("es-AR")}
       >
         es
-      </a>
+      </a> */}
     </div>
   );
 };

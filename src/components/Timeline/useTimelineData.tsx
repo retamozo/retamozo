@@ -1,5 +1,5 @@
 import { useTranslation } from "next-i18next";
-import { createAnchor, iconMap, LINKS } from "./const";
+import { iconMap } from "./const";
 import { Tag, TimelineElementsProps } from "./types";
 
 export const useTimelineData = (): {
@@ -56,6 +56,15 @@ export const useTimelineData = (): {
       date: "October 2019",
       title: t("blockfi.title"),
       description: t("blockfi.description"),
+      icon: iconMap["bigOffice"],
+      location: "Remote",
+    },
+    {
+      id: 6,
+      tag: getTags("coderio.tags"),
+      date: "February 2023",
+      title: t("coderio.title"),
+      description: t("coderio.description"),
       icon: iconMap["bigOffice"],
       location: "Remote",
     },
