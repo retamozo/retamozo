@@ -21,21 +21,6 @@ const LanguageSwitcher: FunctionComponent = () => {
           </a>
         );
       })}
-      {/* <a
-        className={langClassName("en-US")}
-        href="#"
-        onClick={() => changeTranslation("en-US")}
-      >
-        en
-      </a>
-      <span> / </span>
-      <a
-        className={langClassName("es-AR")}
-        href="#"
-        onClick={() => changeTranslation("es-AR")}
-      >
-        es
-      </a> */}
     </div>
   );
 };
